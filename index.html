@@ -9,6 +9,25 @@
 <body>
   <div class="container">
     <h1>Bible Verse Typing Trainer ✍️📖</h1>
+
+    <div class="settings">
+      <label for="translation">Translation:</label>
+      <select id="translation">
+        <option value="kjv">KJV</option>
+        <option value="esv">ESV</option>
+      </select>
+
+      <label for="mode">Mode:</label>
+      <select id="mode">
+        <option value="single">Single Verse</option>
+        <option value="multi">Multi Verse</option>
+      </select>
+
+      <label for="fingerGuide">
+        <input type="checkbox" id="fingerGuide" /> Show Finger Guide
+      </label>
+    </div>
+
     <div id="verse-box"></div>
 
     <textarea id="input" placeholder="Start typing here..." rows="5"></textarea>
@@ -19,6 +38,11 @@
     </div>
 
     <button onclick="loadVerse()">Load New Verse</button>
+
+    <div id="keyboard-guide" class="keyboard-guide hidden">
+      <p>Keyboard Finger Placement Guide (Color Coded)</p>
+      <img src="keyboard-guide.png" alt="Keyboard Finger Guide" />
+    </div>
   </div>
 
   <script src="script.js"></script>
