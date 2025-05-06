@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bible Typing Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bible Verse Typing Trainer ✍️📖</h1>
+    <div id="verse-box"></div>
+
+    <textarea id="input" placeholder="Start typing here..." rows="5"></textarea>
+
+    <div class="stats">
+      <p>Accuracy: <span id="accuracy">0%</span></p>
+      <p>WPM: <span id="wpm">0</span></p>
+    </div>
+
+    <button onclick="loadVerse()">Load New Verse</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
