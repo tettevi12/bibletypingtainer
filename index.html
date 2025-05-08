@@ -3,48 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bible Typing Trainer</title>
+  <title>Bible Typing Lessons</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Bible Verse Typing Trainer ✍️📖</h1>
-
-    <div class="settings">
-      <label for="translation">Translation:</label>
-      <select id="translation">
-        <option value="kjv">KJV</option>
-        <option value="esv">ESV</option>
-      </select>
-
-      <label for="mode">Mode:</label>
-      <select id="mode">
-        <option value="single">Single Verse</option>
-        <option value="multi">Multi Verse</option>
-      </select>
-
-      <label for="fingerGuide">
-        <input type="checkbox" id="fingerGuide" /> Show Finger Guide
-      </label>
+  <div class="app">
+    <h1>Bible Typing Trainer ✍️📖</h1>
+    <div id="menu">
+      <h2>Select a Lesson</h2>
+      <ul id="lessonList"></ul>
     </div>
-
-    <div id="verse-box"></div>
-
-    <textarea id="input" placeholder="Start typing here..." rows="5"></textarea>
-
-    <div class="stats">
-      <p>Accuracy: <span id="accuracy">0%</span></p>
-      <p>WPM: <span id="wpm">0</span></p>
-    </div>
-
-    <button onclick="loadVerse()">Load New Verse</button>
-
-    <div id="keyboard-guide" class="keyboard-guide hidden">
-      <p>Keyboard Finger Placement Guide (Color Coded)</p>
-      <img src="keyboard-guide.png" alt="Keyboard Finger Guide" />
+    <div id="lessonScreen" class="hidden">
+      <p><strong>Lesson:</strong> <span id="lessonTitle"></span></p>
+      <div id="verse-box"></div>
+      <textarea id="input" rows="4" placeholder="Type the verse here..."></textarea>
+      <div class="stats">
+        <p>WPM: <span id="wpm">0</span></p>
+        <p>Accuracy: <span id="accuracy">0%</span></p>
+        <p>Errors: <span id="errors">0</span></p>
+      </div>
+      <button onclick="exitLesson()">Exit Lesson</button>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
